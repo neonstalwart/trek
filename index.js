@@ -1,3 +1,7 @@
+var path = require('path'),
+	promise = require('promised-io/promise'),
+	when = promise.when;
+
 function parseSpec(migrationSpec) {
 	var current = 0, // TODO: get current migration from a file or something
 		dest;
@@ -23,13 +27,8 @@ function parseSpec(migrationSpec) {
 	};
 }
 
-
-var path = require('path'),
-	promise = require('promised-io/promise'),
-	when = promise.when;
-
-// apply migrations from trekDir as determined by migrationSpec and config
-exports.hike = function (trekDir, migrationSpec, config) {
+// apply migrations from treks as determined by destination and config
+function trek(treks, destination, config) {
 
 	// pack a kit
 	// apply migrations
@@ -43,7 +42,7 @@ exports.hike = function (trekDir, migrationSpec, config) {
 	// TODO: change this to a stat
 	// see if there is a kit available
 	try {
-		kit = require(path.join(trekDir, 'kit'));
+		kit = require(path.join(treks, 'kit'));
 	}
 	catch (e) {}
 
@@ -61,9 +60,21 @@ exports.hike = function (trekDir, migrationSpec, config) {
 			});
 		});
 	}
-};
+}
 
 // generate empty migrations in trekDir based on migrationSpec and config
-exports.generate = function (trekDir, migrationSpec, config) {
+function generate(treks, config) {
 	// TODO
 }
+
+// alias trek to trek.hike
+trek.hike = trek;
+
+// symbolic migration sequence numbers
+trek.UP = 'up';
+trek.DOWN = 'down';
+trek.LATEST = 'latest';
+
+trek.generate = generate
+
+module.exports = trek;
