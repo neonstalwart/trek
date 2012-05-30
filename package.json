@@ -19,6 +19,7 @@
 		}
 	],
 	"dependencies": {
+		"promised-io": ">=0.3.0",
 		"optimist": "0.3.x"
 	},
 	"devDependencies": {
