@@ -5,8 +5,8 @@ data migration
 ## Usage
 
 ```
-  node ../trek/bin/cli.js [-h]
-  node ../trek/bin/cli.js [-p <path>] [<sequence number> | -u | -d | --latest | -g]
+  trek [-h]
+  trek [-p <path>] [<sequence number> | -u | -d | --latest | -g]
 ```
 
 ## Options
