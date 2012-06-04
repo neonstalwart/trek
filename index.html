@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Trek by neonstalwart</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Trek</h1>
+        <p>data migration</p>
+        <p class="view"><a href="https://github.com/neonstalwart/trek">View the Project on GitHub <small>neonstalwart/trek</small></a></p>
+        <ul>
+          <li><a href="https://github.com/neonstalwart/trek/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/neonstalwart/trek/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/neonstalwart/trek">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1><code>trek</code></h1>
+
+<p>data migration</p>
+
+<h2>Usage</h2>
+
+<pre><code>  trek [-h]
+  trek [-p &lt;path&gt;] [&lt;sequence number&gt; | -u | -d | --latest | -g]
+</code></pre>
+
+<h2>Options</h2>
+
+<pre><code>  -h, --help      print this help message
+  -p, --path      path to application root.  path should have a "trek" directory
+                  containing the migrations.  default is current working directory.
+  -u, --up        migrate up to next migration
+  -d, --down      rollback current migration
+  --latest        migrate to the migration with the largest sequence number.  this is
+                  the default if no other migration is specified
+  -g, --generate  generate a new migration
+</code></pre>
+
+<h2>LICENSE</h2>
+
+<p><a href="http://www.opensource.org/licenses/bsd-license.php">BSD</a>
+Copyright (c) 2012, Ben Hockey</p>
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/neonstalwart">neonstalwart</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+    
+  </body>
+</html>
