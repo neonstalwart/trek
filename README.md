@@ -12,14 +12,14 @@ data migration
 ## Options
 
 ```
-  -h, --help      print this help message                                                  [boolean]
-  -p, --path      path to application root.  path should have a "trek" directory containing the
-                  migrations.  default is current working directory.
-  -u, --up        migrate up to next migration                                             [boolean]
-  -d, --down      rollback current migration                                               [boolean]
-  --latest        migrate to the migration with the largest sequence number.  this is the default
-                  if no other migration is specified                                       [boolean]
-  -g, --generate  generate a new migration                                                 [boolean]
+  -h, --help      print this help message
+  -p, --path      path to application root.  path should have a "trek" directory
+                  containing the migrations.  default is current working directory.
+  -u, --up        migrate up to next migration
+  -d, --down      rollback current migration
+  --latest        migrate to the migration with the largest sequence number.  this is
+                  the default if no other migration is specified
+  -g, --generate  generate a new migration
 ```
 
 ## LICENSE
